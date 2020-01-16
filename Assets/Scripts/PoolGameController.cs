@@ -65,11 +65,12 @@ public class PoolGameController : MonoBehaviour {
 			Debug.Log(CurrentPlayer.Name + " continues to play");
 			return;
 		}
-
+        
 		Debug.Log(OtherPlayer.Name + " will play");
 		var aux = CurrentPlayer;
 		CurrentPlayer = OtherPlayer;
 		OtherPlayer = aux;
+
 	}
 
 	public void EndMatch() {
