@@ -41,7 +41,7 @@ namespace GameStates {
         private void SetTimer()
         {
             // Create a timer with a two second interval.
-            aTimer = new System.Timers.Timer(2000);
+            aTimer = new System.Timers.Timer(1000);
             // Hook up the Elapsed event for the timer. 
             aTimer.Elapsed += OnTimedEvent;
             aTimer.AutoReset = true;
@@ -72,7 +72,7 @@ namespace GameStates {
                         SetTimer();
                         flagTimer = 1;
                     }
-                    if (time == 2)
+                    if (time == 1)
                     {
                         cueBallBody.useGravity = false;
                         cueBallBody.velocity = Vector3.zero;
@@ -104,13 +104,13 @@ namespace GameStates {
                     if (!(cueBallBody.IsSleeping() || cueBallBody.velocity == Vector3.zero))
                          return;
                 
-                       /*   foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>()) {
+                /*          foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>()) {
                                if (!(rigidbody.IsSleeping() || rigidbody.velocity == Vector3.zero))////// פה הבעיה !! הם ממשיכים לנוע לכן התור לא ממשיך !!
                                    return;
                            }
-
-
                 */
+
+                
 
                     
 
@@ -143,22 +143,6 @@ namespace GameStates {
 
         }*/
 
-        private Rigidbody CheckIfToLetGravity(Rigidbody cueBallBody)
-        {
-            if (flagTimer == 0 )
-            {
-                SetTimer();
-                flagTimer = 1;
-            }
-            
-            
-            if (time == 1)
-            {
-                cueBallBody.useGravity = false;
-                time = 0;
-            }
-            return cueBallBody;
-        }
        
 		public override void LateUpdate() {
 			mainCamera.transform.position = cueBall.transform.position - cameraOffset;

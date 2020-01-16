@@ -24,7 +24,9 @@ public class SnookerBallController : MonoBehaviour
     void OnCollisionEnter(Collision collided)
     {
         
-       //  CueBall = GetComponent<GameObject>();
+      // var  CueBall = GetComponent<GameObject>();
+
+       //  var cueballPos = CueBall.transform.position;
 
        /* if (collided.gameObject.name == "pSphere3")
         {
