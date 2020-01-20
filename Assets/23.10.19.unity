@@ -633,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 491266, guid: d9c8feaa4dc0f8744a4809fb85b66fef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.5
+      value: 19.84
       objectReference: {fileID: 0}
     - target: {fileID: 491266, guid: d9c8feaa4dc0f8744a4809fb85b66fef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -641,7 +641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 491266, guid: d9c8feaa4dc0f8744a4809fb85b66fef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 101.1
+      value: 95.55
       objectReference: {fileID: 0}
     - target: {fileID: 2390272, guid: d9c8feaa4dc0f8744a4809fb85b66fef, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -775,7 +775,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344705200}
   m_LocalRotation: {x: 0, y: 0.56927955, z: 0.8221441, w: 0}
-  m_LocalPosition: {x: -59.13001, y: 111.7, z: -9.2}
+  m_LocalPosition: {x: -59.13001, y: 106.9, z: -11}
   m_LocalScale: {x: 0.617755, y: 0.48802245, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1269,7 +1269,7 @@ MonoBehaviour:
   mainCamera: {fileID: 987905016}
   scoreBar: {fileID: 32361039}
   winnerMessage: {fileID: 1442923799}
-  table: {fileID: 0}
+  botenWithHoles: {fileID: 1043276513}
   maxForce: 7000
   minForce: 250
   strikeDirection: {x: 0, y: 0, z: 0}
@@ -2246,7 +2246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453233146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.12, y: 99.7, z: 23.8}
+  m_LocalPosition: {x: -60.12, y: 95, z: 17.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2016673778}
@@ -2291,7 +2291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 491266, guid: d9c8feaa4dc0f8744a4809fb85b66fef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1025
+      value: 10.3
       objectReference: {fileID: 0}
     - target: {fileID: 491266, guid: d9c8feaa4dc0f8744a4809fb85b66fef, type: 3}
       propertyPath: m_RootOrder
@@ -2299,7 +2299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 491266, guid: d9c8feaa4dc0f8744a4809fb85b66fef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.7
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 491266, guid: d9c8feaa4dc0f8744a4809fb85b66fef, type: 3}
       propertyPath: m_LocalPosition.y

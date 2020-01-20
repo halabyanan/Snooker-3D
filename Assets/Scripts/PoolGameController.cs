@@ -8,7 +8,7 @@ public class PoolGameController : MonoBehaviour {
 	public GameObject mainCamera;
 	public GameObject scoreBar;
 	public GameObject winnerMessage;
-    public GameObject table;
+    public GameObject botenWithHoles;
 
 	public float maxForce;
 	public float minForce;

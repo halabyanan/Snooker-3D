@@ -14,7 +14,7 @@ public class Player {
 		get;
 		private set;
 	}
-
+    
 	public int Points {
 		get { return ballsCollected.Count; }
 	}

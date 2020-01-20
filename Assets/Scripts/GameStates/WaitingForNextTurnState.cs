@@ -10,11 +10,11 @@ namespace GameStates {
 		private GameObject cueBall;
 		private GameObject redBalls;
 		private GameObject mainCamera;
-        private GameObject table;
+        private GameObject botenwithholes;
         int flagTimer = 0;
 		private Vector3 cameraOffset;
-		private Vector3 cueOffset;
 		private Quaternion cameraRotation;
+		private Vector3 cueOffset;
 		private Quaternion cueRotation;
         private int time = 0;
       //  private int X1 = 40, X2 = -28, Z1 = 70, Z2 = -80;
@@ -26,7 +26,7 @@ namespace GameStates {
 		public WaitingForNextTurnState(MonoBehaviour parent) : base(parent) {
 			gameController = (PoolGameController)parent;
 
-            table = gameController.table;
+            botenwithholes = gameController.botenWithHoles;
            
 			cue = gameController.cue;
 			cueBall = gameController.cueBall;
@@ -54,7 +54,8 @@ namespace GameStates {
         }
 
 		public override void FixedUpdate() {
-            
+
+            Collider col;
 			Debug.Log(redBalls.GetComponentsInChildren<Transform>().Length);
 			if (redBalls.GetComponentsInChildren<Transform>().Length == 1) {
                 gameController.EndMatch();
@@ -81,7 +82,24 @@ namespace GameStates {
                         flagTimer = 0;
                         
                     }
-                
+
+
+                    col = botenwithholes.GetComponent<Collider>();
+
+               foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>()) 
+               {
+                   Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
+
+                   rigidbody.AddForce(closestPoint);
+                   
+               }
+                  
+
+
+
+
+
+
                 //////////
                   //  var dir = gameController.strikeDirection * -1;
                    // var vec3 = Vector3(0, 0, -1);
@@ -103,15 +121,17 @@ namespace GameStates {
                      * */
                     if (!(cueBallBody.IsSleeping() || cueBallBody.velocity == Vector3.zero))
                          return;
-                
-                /*          foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>()) {
-                               if (!(rigidbody.IsSleeping() || rigidbody.velocity == Vector3.zero))////// פה הבעיה !! הם ממשיכים לנוע לכן התור לא ממשיך !!
-                                   return;
-                           }
+
+
+                            
+
+
+                     /*foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
+                    {
+                        if (!(rigidbody.IsSleeping() || rigidbody.velocity == Vector3.zero))////// פה הבעיה !! הם ממשיכים לנוע לכן התור לא ממשיך !!
+                            return;
+                    }
                 */
-
-                
-
                     
 
 				gameController.NextPlayer();
