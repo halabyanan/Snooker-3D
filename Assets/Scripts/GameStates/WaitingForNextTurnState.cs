@@ -3,6 +3,8 @@ using System.Collections;
 using System.Threading;
 using System.Timers;
 using System;
+using System.Collections.Generic;
+using System.Collections;
 namespace GameStates {
 	public class WaitingForNextTurnState : AbstractGameObjectState {
 		private PoolGameController gameController;
@@ -12,6 +14,7 @@ namespace GameStates {
 		private GameObject mainCamera;
         private GameObject botenwithholes;
         int flagTimer = 0;
+        int flag = 0;
 		private Vector3 cameraOffset;
 		private Quaternion cameraRotation;
 		private Vector3 cueOffset;
@@ -54,7 +57,7 @@ namespace GameStates {
         }
 
 		public override void FixedUpdate() {
-
+            flag = 1;
             Collider col;
 			Debug.Log(redBalls.GetComponentsInChildren<Transform>().Length);
 			if (redBalls.GetComponentsInChildren<Transform>().Length == 1) {
@@ -84,20 +87,9 @@ namespace GameStates {
                     }
 
 
-                    col = botenwithholes.GetComponent<Collider>();
+                
 
-               foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>()) 
-               {
-                   Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
-
-                   rigidbody.AddForce(closestPoint);
-                   
-               }
-                  
-
-
-
-
+    
 
 
                 //////////
@@ -141,8 +133,12 @@ namespace GameStates {
 			}
 		}
 
-       
 
+        public override void Update()
+        {
+
+         
+        }
    /*     private void CheckRangeOfCueBall(Rigidbody cueBallBody)
         {
             if (cueBallBody.position.z < Z2 || cueBallBody.position.z > Z1 || cueBallBody.position.x < X2 || cueBallBody.position.x > X1)
@@ -165,6 +161,35 @@ namespace GameStates {
 
        
 		public override void LateUpdate() {
+
+            RedBallsCont redBallCont = new RedBallsCont();
+            List<GameObject> list = redBallCont.GetAllChilds();
+
+            Collider col = botenwithholes.GetComponent<Collider>();
+          
+        /*    foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
+            {
+                
+
+                    Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
+                    //rigidbody.AddForce(closestPoint - rigidbody.transform.position);
+                    rigidbody.MovePosition(closestPoint - rigidbody.transform.position);
+          
+
+            }*/
+
+            foreach (var obj in list)
+            {
+
+
+                Vector3 closestPoint = col.ClosestPointOnBounds(obj.transform.position);
+             //   var go = obj.gameobject;
+                obj.GetComponent<Rigidbody>().AddForce(closestPoint - obj.transform.position);
+               // go.AddForce(closestPoint - rigidbody.transform.position);
+             //   obj.MovePosition(closestPoint - obj.position);
+
+
+            }
 			mainCamera.transform.position = cueBall.transform.position - cameraOffset;
 			mainCamera.transform.rotation = cameraRotation;
 			
