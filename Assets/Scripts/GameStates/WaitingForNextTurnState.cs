@@ -162,25 +162,25 @@ namespace GameStates {
        
 		public override void LateUpdate() {
 
-            RedBallsCont redBallCont = new RedBallsCont();
-            List<GameObject> list = redBallCont.GetAllChilds();
+          //  RedBallsCont redBallCont = new RedBallsCont();
+          //  List<GameObject> list = redBallCont.GetAllChilds();
 
             Collider col = botenwithholes.GetComponent<Collider>();
-          
-        /*    foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
-            {
-                
+
+            
+                foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
+                {
 
                     Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
-                    //rigidbody.AddForce(closestPoint - rigidbody.transform.position);
-                    rigidbody.MovePosition(closestPoint - rigidbody.transform.position);
-          
+                    rigidbody.AddForce(closestPoint - rigidbody.transform.position);
+                //    rigidbody.MovePosition(closestPoint - rigidbody.transform.position);
 
-            }*/
 
-            foreach (var obj in list)
+                }
+                flag = 1;
+           
+    /*        foreach (var obj in list)
             {
-
 
                 Vector3 closestPoint = col.ClosestPointOnBounds(obj.transform.position);
              //   var go = obj.gameobject;
@@ -190,6 +190,7 @@ namespace GameStates {
 
 
             }
+      */
 			mainCamera.transform.position = cueBall.transform.position - cameraOffset;
 			mainCamera.transform.rotation = cameraRotation;
 			

@@ -64,7 +64,7 @@ public class SnookerBallController : MonoBehaviour
         {
             var velocity = rigidbody.velocity;
 
-
+            
             /*      var pos = rigidbody.position;
                   pos.x = redBalls.transform.position.x; //////////להמשיך מפה
                   rigidbody.position = pos;
