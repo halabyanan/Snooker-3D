@@ -7,6 +7,9 @@ namespace GameStates {
 		private GameObject cueBall;
 		private GameObject mainCamera;
 
+        private GameObject botenwithholes;
+        private GameObject redBalls;
+
 		private PoolGameController gameController;
 
 		public WaitingForStrikeState(MonoBehaviour parent) : base(parent) { 
@@ -15,10 +18,27 @@ namespace GameStates {
 			cueBall = gameController.cueBall;
 			mainCamera = gameController.mainCamera;
 
+            botenwithholes = gameController.botenWithHoles;
+            redBalls = gameController.redBalls;
 			cue.GetComponent<Renderer>().enabled = true;
 		}
 
 		public override void Update() {
+
+            Collider col = botenwithholes.GetComponent<Collider>();
+
+
+            foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
+            {
+
+                Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
+                rigidbody.AddForce(closestPoint - rigidbody.transform.position);
+                //    rigidbody.MovePosition(closestPoint - rigidbody.transform.position);
+
+
+            }
+
+
 			var x = Input.GetAxis("Horizontal");
             var y = Input.GetAxis("Vertical");
 

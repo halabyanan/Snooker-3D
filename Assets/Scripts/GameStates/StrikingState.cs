@@ -5,6 +5,9 @@ namespace GameStates {
 	public class StrikingState : AbstractGameObjectState {
 		private PoolGameController gameController;
 
+        private GameObject botenwithholes;
+        private GameObject redBalls;
+
 		private GameObject cue;
 		private GameObject cueBall;
 
@@ -15,6 +18,8 @@ namespace GameStates {
 			gameController = (PoolGameController)parent;
 			cue = gameController.cue;
 			cueBall = gameController.cueBall;
+            botenwithholes = gameController.botenWithHoles;
+            redBalls = gameController.redBalls;
             
 		}
 
@@ -25,6 +30,10 @@ namespace GameStates {
 		}
 
 		public override void FixedUpdate () {
+
+          
+
+
             var cueBallBody = cueBall.GetComponent<Rigidbody>();
              
 			var distance = Vector3.Distance(cue.transform.position, cueBall.transform.position);

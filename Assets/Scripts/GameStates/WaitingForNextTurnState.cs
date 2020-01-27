@@ -58,7 +58,7 @@ namespace GameStates {
 
 		public override void FixedUpdate() {
             flag = 1;
-            Collider col;
+           // Collider col;
 			Debug.Log(redBalls.GetComponentsInChildren<Transform>().Length);
 			if (redBalls.GetComponentsInChildren<Transform>().Length == 1) {
                 gameController.EndMatch();
@@ -87,7 +87,6 @@ namespace GameStates {
                     }
 
 
-                
 
     
 
@@ -115,9 +114,6 @@ namespace GameStates {
                          return;
 
 
-                            
-
-
                      /*foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
                     {
                         if (!(rigidbody.IsSleeping() || rigidbody.velocity == Vector3.zero))////// פה הבעיה !! הם ממשיכים לנוע לכן התור לא ממשיך !!
@@ -137,6 +133,18 @@ namespace GameStates {
         public override void Update()
         {
 
+            Collider col = botenwithholes.GetComponent<Collider>();
+
+
+            foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
+            {
+
+                Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
+                rigidbody.AddForce(closestPoint - rigidbody.transform.position);
+                //    rigidbody.MovePosition(closestPoint - rigidbody.transform.position);
+
+
+            }
          
         }
    /*     private void CheckRangeOfCueBall(Rigidbody cueBallBody)
@@ -165,18 +173,7 @@ namespace GameStates {
           //  RedBallsCont redBallCont = new RedBallsCont();
           //  List<GameObject> list = redBallCont.GetAllChilds();
 
-            Collider col = botenwithholes.GetComponent<Collider>();
-
-            
-                foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
-                {
-
-                    Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
-                    rigidbody.AddForce(closestPoint - rigidbody.transform.position);
-                //    rigidbody.MovePosition(closestPoint - rigidbody.transform.position);
-
-
-                }
+          
                 flag = 1;
            
     /*        foreach (var obj in list)
