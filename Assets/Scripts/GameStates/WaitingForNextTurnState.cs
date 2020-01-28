@@ -65,10 +65,8 @@ namespace GameStates {
 			} else {
                                                
                 	var cueBallBody = cueBall.GetComponent<Rigidbody>();
-                    cueBallBody.useGravity = true;
-               //     CheckRangeOfCueBall(cueBallBody);
-               //    var cueBallBodyret =  CheckIfToLetGravity(cueBallBody);
-                ////////////// checking the gravity time
+            //        cueBallBody.useGravity = true;
+             
 
                    
                     if (flagTimer == 0)
@@ -76,7 +74,7 @@ namespace GameStates {
                         SetTimer();
                         flagTimer = 1;
                     }
-                    if (time == 1)
+                    if (time == 2)
                     {
                         cueBallBody.useGravity = false;
                         cueBallBody.velocity = Vector3.zero;
@@ -133,6 +131,10 @@ namespace GameStates {
         public override void Update()
         {
 
+            var cueBallBody = cueBall.GetComponent<Rigidbody>();
+
+
+
             Collider col = botenwithholes.GetComponent<Collider>();
 
 
@@ -145,6 +147,9 @@ namespace GameStates {
 
 
             }
+
+            Vector3 closestPointOfWhiteBall = col.ClosestPointOnBounds(cueBallBody.position);
+            cueBallBody.AddForce(closestPointOfWhiteBall - cueBallBody.transform.position);
          
         }
    /*     private void CheckRangeOfCueBall(Rigidbody cueBallBody)
