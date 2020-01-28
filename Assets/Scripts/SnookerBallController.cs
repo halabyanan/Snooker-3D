@@ -69,7 +69,7 @@ public class SnookerBallController : MonoBehaviour
                   pos.x = redBalls.transform.position.x; //////////להמשיך מפה
                   rigidbody.position = pos;
                   */
-            velocity.y *= 1.01f;
+            velocity.y *= 1.03f;
             //  velocity.x *= 0.2f;
             rigidbody.velocity = velocity;
         }
@@ -77,13 +77,13 @@ public class SnookerBallController : MonoBehaviour
         if (rigidbody.velocity.x > 0)
         {
             var velocity = rigidbody.velocity;
-
+           
 
             /*      var pos = rigidbody.position;
                   pos.x = redBalls.transform.position.x; //////////להמשיך מפה
                   rigidbody.position = pos;
                   */
-            velocity.x *= 1.01f;
+            velocity.x *= 1.03f;
             //  velocity.x *= 0.2f;
             rigidbody.velocity = velocity;
         }
@@ -97,7 +97,7 @@ public class SnookerBallController : MonoBehaviour
                   pos.x = redBalls.transform.position.x; //////////להמשיך מפה
                   rigidbody.position = pos;
                   */
-            velocity.z *= 1.01f;
+            velocity.z *= 1.03f;
             //  velocity.x *= 0.2f;
             rigidbody.velocity = velocity;
         }

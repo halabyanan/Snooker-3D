@@ -8,13 +8,14 @@ namespace GameStates {
 		private GameObject cue;
 		private GameObject cueBall;
 
-		private float speed = 60f;
+		private float speed = 500f;
 		private float force = 0f;
 		
 		public StrikeState(MonoBehaviour parent) : base(parent) { 
 			gameController = (PoolGameController)parent;
 			cue = gameController.cue;
 			cueBall = gameController.cueBall;
+             
             
 			var forceAmplitude = gameController.maxForce - gameController.minForce;
 			var relativeDistance = (Vector3.Distance(cue.transform.position, cueBall.transform.position) - PoolGameController.MIN_DISTANCE) / (PoolGameController.MAX_DISTANCE - PoolGameController.MIN_DISTANCE);
