@@ -28,7 +28,7 @@ namespace GameStates {
         private static System.Timers.Timer aTimer;
 		public WaitingForNextTurnState(MonoBehaviour parent) : base(parent) {
 			gameController = (PoolGameController)parent;
-
+         
             botenwithholes = gameController.botenWithHoles;
            
 			cue = gameController.cue;
