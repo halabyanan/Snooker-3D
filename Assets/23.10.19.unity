@@ -855,6 +855,7 @@ GameObject:
   - component: {fileID: 344705206}
   - component: {fileID: 344705207}
   - component: {fileID: 344705208}
+  - component: {fileID: 344705209}
   m_Layer: 0
   m_Name: Cue
   m_TagString: Untagged
@@ -980,7 +981,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!136 &344705208
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -995,6 +996,18 @@ CapsuleCollider:
   m_Height: 54.44884
   m_Direction: 1
   m_Center: {x: 0.0000014305122, y: 26.712608, z: -0.0000027034466}
+--- !u!114 &344705209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344705200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567cab8967b424e47b8ceb4edab1d5ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &378574671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2079,7 +2092,7 @@ MeshCollider:
   m_GameObject: {fileID: 1043276513}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: -1
@@ -2104,8 +2117,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 3
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!1001 &1182155583
 PrefabInstance:
   m_ObjectHideFlags: 0

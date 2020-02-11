@@ -46,7 +46,7 @@ namespace GameStates {
             {
                 var angle = y * 100 * Time.deltaTime;
                 gameController.strikeDirection = Quaternion.AngleAxis(angle, Vector3.right) * gameController.strikeDirection;
-                mainCamera.transform.RotateAround(cueBall.transform.position, Vector3.right, angle);
+        //        mainCamera.transform.RotateAround(cueBall.transform.position, Vector3.right, angle);
                 cue.transform.RotateAround(cueBall.transform.position, Vector3.right, angle);
             }
 
@@ -54,7 +54,7 @@ namespace GameStates {
 			if (x != 0) {
 				var angle = x * 100 * Time.deltaTime;
 				gameController.strikeDirection = Quaternion.AngleAxis(angle, Vector3.up) * gameController.strikeDirection;
-				mainCamera.transform.RotateAround(cueBall.transform.position, Vector3.up, angle);
+		//		mainCamera.transform.RotateAround(cueBall.transform.position, Vector3.up, angle);
 				cue.transform.RotateAround(cueBall.transform.position, Vector3.up, angle);
 			}
 			Debug.DrawLine(cueBall.transform.position, cueBall.transform.position + gameController.strikeDirection * 10);
