@@ -18,6 +18,7 @@ public class PocketsController : MonoBehaviour {
 				GameObject.Destroy(collision.gameObject);
 
 				var ballNumber = int.Parse(objectName.Replace("Ball", ""));
+
 				PoolGameController.GameInstance.BallPocketed(ballNumber);
 			}
 		}
