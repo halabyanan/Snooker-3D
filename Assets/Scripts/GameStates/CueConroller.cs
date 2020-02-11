@@ -5,10 +5,11 @@ using System.Threading;
 
 public class CueConroller : MonoBehaviour
 {
+    private AudioSource source;
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,10 +32,10 @@ public class CueConroller : MonoBehaviour
         }
 
         //Check for a match with the specific tag on any GameObject that collides with your GameObject
-        if (collision.gameObject.tag == "botenWithHoles")
+        if (collision.gameObject.name == "CueBall")
         {
-            //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Do something else here");
+
+            source.Play();
         }
     }
 }

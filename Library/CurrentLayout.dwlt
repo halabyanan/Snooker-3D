@@ -44,10 +44,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 636
-  m_MinSize: {x: 683, y: 498}
-  m_MaxSize: {x: 14004, y: 14048}
+  m_MinSize: {x: 681, y: 498}
+  m_MaxSize: {x: 14002, y: 14048}
   vertical: 0
-  controlID: 91
+  controlID: 10
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -67,8 +67,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 636
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 92
+  controlID: 91
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 93
+  controlID: 24
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,20 +336,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/SoundsEffect
   m_ViewMode: 1
   m_StartGridSize: 55
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/SoundsEffect
   m_LastFoldersGridSize: 55
   m_LastProjectPath: D:\install\user\Desktop\Snooker-dev
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 32}
-    m_SelectedIDs: 520d0000
-    m_LastClickedID: 3410
-    m_ExpandedIDs: 0000000070090000200b0000a20c0000520d000000ca9a3b
+    m_SelectedIDs: 1a7b0100
+    m_LastClickedID: 97050
+    m_ExpandedIDs: 0000000074090000240b0000a60c0000560d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070090000200b0000a20c0000520d0000
+    m_ExpandedIDs: 0000000074090000240b0000a60c0000560d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -495,21 +495,21 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 780e0000
-      m_LastClickedID: 3704
-      m_ExpandedIDs: d6fbffff
+      scrollPos: {x: 0, y: 50}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: d6fbffffba0e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Cue
-        m_OriginalName: Cue
+        m_Name: Main Camera
+        m_OriginalName: Main Camera
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 3582
+        m_UserData: 3702
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -553,9 +553,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 468, y: 66.55575, z: -371}
+    m_Target: {x: 510.10428, y: 329.4201, z: -560.5232}
     speed: 2
-    m_Value: {x: 468, y: 66.55575, z: -371}
+    m_Value: {x: 510.10428, y: 329.4201, z: -560.5232}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -583,13 +583,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.18029247, y: 0.47996444, z: -0.1016876, w: 0.85251886}
+    m_Target: {x: 0.19687283, y: 0.67180383, z: -0.19256897, w: 0.6876321}
     speed: 2
-    m_Value: {x: 0.18029247, y: 0.47996444, z: -0.1016876, w: 0.85251886}
+    m_Value: {x: 0.19687283, y: 0.67180383, z: -0.19256897, w: 0.6876321}
   m_Size:
-    m_Target: 22
+    m_Target: 725.6489
     speed: 2
-    m_Value: 22
+    m_Value: 725.6489
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -660,18 +660,18 @@ MonoBehaviour:
       y: 17
       width: 761
       height: 318
-    m_Scale: {x: 1.118374, y: 1.118374}
-    m_Translation: {x: 368.88962, y: 155.38248}
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 380.5, y: 159}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -329.8446
-      y: -138.93607
-      width: 680.45215
-      height: 284.34137
+      x: -380.5
+      y: -159
+      width: 761
+      height: 318
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
