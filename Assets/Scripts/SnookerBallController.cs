@@ -36,7 +36,7 @@ public class SnookerBallController : MonoBehaviour
 
             
        
-            velocity.y *= 1.01f;
+            velocity.y *= 1.02f;
             //  velocity.x *= 0.2f;
             rigidbody.velocity = velocity;
         }
@@ -48,7 +48,7 @@ public class SnookerBallController : MonoBehaviour
 
   
             
-            velocity.x *= 1.01f;
+            velocity.x *= 1.02f;
             //  velocity.x *= 0.2f;
             rigidbody.velocity = velocity;
         }
@@ -58,7 +58,7 @@ public class SnookerBallController : MonoBehaviour
             var velocity = rigidbody.velocity;
 
 
-            velocity.z *= 1.01f;
+            velocity.z *= 1.02f;
             //  velocity.x *= 0.2f;
             rigidbody.velocity = velocity;
         }

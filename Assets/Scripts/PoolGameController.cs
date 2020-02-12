@@ -16,7 +16,7 @@ public class PoolGameController : MonoBehaviour {
 	public Vector3 strikeDirection;
 
 	public const float MIN_DISTANCE = 27.5f;
-	public const float MAX_DISTANCE = 32f;
+	public const float MAX_DISTANCE = 35f;
 	
 	public IGameObjectState currentState;
 

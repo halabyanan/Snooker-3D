@@ -12,7 +12,7 @@ namespace GameStates {
 		private GameObject cueBall;
 
 		private float cueDirection = -1;
-		private float speed = 7;
+		private float speed = 10;
       //  private int X1 = 24, X2 = -24, Z1 = 30, Z2 = -30;
 		public StrikingState(MonoBehaviour parent) : base(parent) { 
 			gameController = (PoolGameController)parent;

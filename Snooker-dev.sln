@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{210E050F-B04C-B8C3-FCB4-285C7D6B37FD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SoundEffects", "SoundEffects", "{CF01D690-BB75-4B37-9D72-E6BEFF56F845}"
+	ProjectSection(SolutionItems) = preProject
+		..\149028_SOUNDDOGS__bi.mp3 = ..\149028_SOUNDDOGS__bi.mp3
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -8,7 +8,7 @@ namespace GameStates {
 		private GameObject cue;
 		private GameObject cueBall;
 
-		private float speed = 500f;
+		private float speed = 200f;
 		private float force = 0f;
 		
 		public StrikeState(MonoBehaviour parent) : base(parent) { 
