@@ -30,7 +30,6 @@ namespace GameStates {
 		}
 
 		public override void FixedUpdate () {
-
           
 
 
