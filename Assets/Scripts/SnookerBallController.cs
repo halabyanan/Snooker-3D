@@ -18,6 +18,8 @@ public class SnookerBallController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.sleepThreshold = 0.15f;
 
+
+        
        
 	}
 

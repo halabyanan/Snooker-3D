@@ -28,7 +28,7 @@ namespace GameStates {
             Collider col = botenwithholes.GetComponent<Collider>();
 
 
-            foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
+        /*    foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
             {
 
                 Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
@@ -37,7 +37,7 @@ namespace GameStates {
 
 
             }
-
+            */
 
 			var x = Input.GetAxis("Horizontal");
             var y = Input.GetAxis("Vertical");
