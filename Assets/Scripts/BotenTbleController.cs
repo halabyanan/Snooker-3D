@@ -7,11 +7,13 @@ using System.Threading;
 public class BotenTbleController : MonoBehaviour
 {
     public GameObject redBalls;
+    public GameObject botenwithholes;
 
     // Start is called before the first frame update
     void Start()
     {
         redBalls = GameObject.Find("RedBalls");
+        botenwithholes = GameObject.Find("botenWithHoles");
     }
 
     // Update is called once per frame
@@ -37,6 +39,27 @@ public class BotenTbleController : MonoBehaviour
         }
 
     }
+
+    void OnCollisionExit(Collision collision)
+    {
+        Collider col = botenwithholes.GetComponent<Collider>();
+
+        foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
+        {
+            if (rigidbody.transform.name == collision.gameObject.name)
+            {
+
+                //   Thread a = new Thread(()=>AddNormalForce(collision,rigidbody));
+                //    a.Start();
+                Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
+                rigidbody.AddForce(closestPoint - rigidbody.transform.position);
+
+            }
+        }
+
+
+    }
+
 
   /*  public static void AddNormalForce(Collision collision,Rigidbody rigidbody)
     {
