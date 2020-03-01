@@ -141,7 +141,7 @@ namespace GameStates {
             foreach (var rigidbody in redBalls.GetComponentsInChildren<Rigidbody>())
             {
 
-                Vector3 closestPoint = col.ClosestPointOnBounds(rigidbody.position);
+                Vector3 closestPoint = col.ClosestPoint(rigidbody.position);
                 rigidbody.AddForce(closestPoint - rigidbody.transform.position);
                 //    rigidbody.MovePosition(closestPoint - rigidbody.transform.position);
 
